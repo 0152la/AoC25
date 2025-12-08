@@ -132,10 +132,12 @@ count_timelines(std::vector<std::string> layout)
         t += p;
     }
 
-    // TODO this is wrong, whyyyyyyyyyyy
-    size_t timelines
-        = std::accumulate(particle_front.begin(), particle_front.end(), 0,
-            [](size_t acc, size_t p_count) { return acc + p_count; });
+    //size_t timelines
+        //= std::accumulate(particle_front.begin(), particle_front.end(), decltype(particle_front)::value_type(0),
+            //[](size_t acc, size_t p_count) { return acc + p_count; });
+    size_t timelines { std::accumulate(particle_front.begin(), particle_front.end(), 0,
+            [](size_t acc, size_t p_count) { return acc + p_count; }) };
+    //auto timelines = size_t {};
 
     std::cout << "TIMELINES " << timelines << std::endl;
     std::cout << "OTHER " << t << std::endl;
