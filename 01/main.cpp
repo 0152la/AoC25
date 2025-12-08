@@ -152,8 +152,10 @@ do_one_file(std::string _path)
 int
 main()
 {
+    //std::vector<std::string> tests
+        //= { "input", "input2", "input3", "input4", "input5", "input_celery" };
     std::vector<std::string> tests
-        = { "input", "input2", "input3", "input4", "input5" };
+        = { "i_bin" };
     for (const auto& t : tests)
     {
         do_one_file(t);
